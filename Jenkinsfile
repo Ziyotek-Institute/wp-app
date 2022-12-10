@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'docker build -t sergo92/webapp:v2'
+                sh 'docker build -t sergo92/webapp:v2 .'
             }
         }
         stage('Login') {
