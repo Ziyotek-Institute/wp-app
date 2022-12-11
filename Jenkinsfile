@@ -1,5 +1,7 @@
 pipeline {
-    agent { ssh_docker }
+    agent { 
+        label 'ssh_docker'
+    }
     environment {
         DOCKERHUB_CREDENTIALS = credentials('git')
     }
