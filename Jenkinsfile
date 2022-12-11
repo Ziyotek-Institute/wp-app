@@ -21,10 +21,10 @@ pipeline {
                 sh 'docker push sergo92/webapp:v2'
             }
         }
-    }
-}
-post {
-    always {
-        sh 'docker logout'
+        stage('Logout') {
+            steps {
+                sh 'docker logout'
+            }
+        }
     }
 }
