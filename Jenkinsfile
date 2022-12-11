@@ -3,7 +3,7 @@ pipeline {
         label 'ssh_docker'
     }
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('git')
+        DOCKERHUB_CREDENTIALS = credentials('docker-hub')
     }
     stages {
         stage('build') {
