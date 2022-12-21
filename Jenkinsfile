@@ -26,5 +26,12 @@ pipeline {
                 sh 'docker logout'
             }
         }
+        stage('Roll out new image'){
+            steps {
+                sh 'cd /home/ansible/'
+                sh 'docker pull sergo92/webapp:v2'
+                sh 'docker-compose up -d'           
+            }
+        }
     }
 }
