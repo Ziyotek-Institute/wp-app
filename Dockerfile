@@ -1,3 +1,3 @@
 FROM wordpress:latest
 
-COPY . /var/www/html/
+COPY html/ /var/www/html/
